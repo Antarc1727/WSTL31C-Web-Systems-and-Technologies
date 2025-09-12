@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+            </ul>
+        </nav>
+        <script>
+        // Offset scroll for sticky nav
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
+                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                }
+            });
+        });
+        </script>
+        <div class="container">
+        <h1>WELCOME TO MY WEBSITE</h1>
+        <p>This is a test website made by Patrick Galvez</p>
+
+        <a href="https://www.pexels.com/videos/" target="_blank">Pexels link</a>
+
+        <h2 id="about">ABOUT THIS PAGE</h2>
+        <p>
+            Hello guys I havent slept for 2 days
+        </p>
+
+        <h2 id="gallery">SAMPLE IMAGE</h2>
+        <img src="https://images.pexels.com/photos/250591/pexels-photo-250591.jpeg" 
+             alt="Cherry Blossoms" width="400">
+        
+        <h2>SAMPLE VIDEO</h2>
+        <video width="400" controls>
+            <source src="Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <p>&copy; 2025 My Simple Website<br>bau bau</p>
+        </div>
+    </body>
+</html>

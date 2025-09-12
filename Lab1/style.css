@@ -1,0 +1,150 @@
+body {
+    background-color: #CAE9FF; /*Mint Green*/
+    font-family: 'Epunda Slab', Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: url('Wave Pattern.png');
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.18;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+img, video {
+    display: block;
+    margin: 0 auto 24px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    transition: transform 0.3s;
+}
+img:hover {
+    transform: scale(1.05) rotateY(10deg); /* 3D transform */
+}
+video:hover {
+    transform: scale(1.03) rotateX(8deg); /* 3D transform */
+}
+
+h1, h2 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-family: 'Archivo Black', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+p {
+    margin-bottom: 18px;
+}
+
+/* Add container for max-width and padding */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Navigation Bar */
+nav {
+    background: #2B3467;
+    padding: 12px 0;
+    margin-bottom: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(43,52,103,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s, background 0.2s, transform 0.2s;
+    background: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    display: inline-block;
+}
+nav ul li a:hover {
+    color: #2B3467;
+    background: #f3f3f3;
+    transform: scale(1.13);
+}
+
+/* Form Styling */
+form {
+    margin: 32px auto 0 auto;
+    max-width: 400px;
+    background: #F9F9F9;
+    padding: 24px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+form label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+form input, form textarea {
+    padding: 8px 10px;
+    border: 1px solid #BAD7E9;
+    border-radius: 6px;
+    font-size: 1em;
+}
+form button {
+    background: #2B3467;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+form button:hover {
+    background: #BAD7E9;
+    color: #2B3467;
+    transform: scale(1.05) skewX(-5deg); /* 2D transform */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 10px 2vw;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+    img, video {
+        width: 98vw !important;
+        max-width: 98vw;
+    }
+    form {
+        max-width: 98vw;
+        padding: 10px 2vw;
+    }
+}
