@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#js-section">JAVASCRIPT</a></li>
+            </ul>
+        </nav>
+        <div class="container" id="home">
+            <h1>WELCOME TO MY WEBSITE</h1>
+            <p>This is a test website made by Patrick Galvez</p>
+            <a href="https://www.pexels.com/videos/" target="_blank">Pexels link</a>
+        </div>
+
+        <div class="container" id="about">
+            <h2>ABOUT THIS PAGE</h2>
+            <p>Hello guys I havent slept for 2 days</p>
+        </div>
+
+        <div class="container">
+            <h2 id="gallery">SAMPLE IMAGE</h2>
+            <img src="https://images.pexels.com/photos/250591/pexels-photo-250591.jpeg" 
+                 alt="Cherry Blossoms" width="400">
+        </div>
+
+        <div class="container">
+            <h2>SAMPLE VIDEO</h2>
+            <video width="400" controls>
+                <source src="Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="container js-demo" id="js-section">
+            <h2>JAVASCRIPT</h2>
+            <div class="btn-stack">
+                <button id="btnAlert">Show Alert</button>
+                <button id="btnChangeText">Change This Text</button>
+                <span id="changeTextTarget">Original Text</span>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; margin-bottom:18px;">
+                <button id="btnToggleImg">Toggle Image</button>
+                <img id="toggleImg" src="https://images.pexels.com/photos/250591/pexels-photo-250591.jpeg" alt="Toggle" width="120" style="display:inline-block; margin-top:12px;">
+                <div id="hoverMsg" style="font-weight:bold;margin-top:6px;"></div>
+            </div>
+            <div style="margin-bottom:18px;">
+                <button id="btnColor">Randomize Background Color</button>
+            </div>
+        </div>
+        <div class="container" style="margin-bottom: 0;">
+            <p>&copy; 2025 My Simple Website<br>bau bau</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
