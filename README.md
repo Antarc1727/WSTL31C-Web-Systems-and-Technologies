@@ -1,3 +1,3 @@
-# WSTL31C-Web-Systems-and-Technologies
+# PLEASE READ
 
 The activities are all organized into branches (Prelims, Midterms, Finals)
