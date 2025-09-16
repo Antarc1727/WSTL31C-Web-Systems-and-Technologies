@@ -1,3 +1,5 @@
-# PLEASE READ
+# WEB SYSTEMS AND TECHNOLOGIES
 
-The activities are all organized into branches (Prelims, Midterms, Finals)
+Student name: Patrick Louis V. Galvez
+Student number: 2023-1-01545
+Email: 2023-1-01545@lpu.edu.ph
